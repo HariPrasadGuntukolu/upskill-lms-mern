@@ -137,7 +137,7 @@ export const sendForgotMail = async (subject, data) => {
     <p>If you didn’t request this, just ignore this email.</p>
     <div class="footer">
       <p>Thank you,<br>UpSkill Team</p>
-      <p><a href="https://upskillonline.com">upskillonline.com</a></p>
+      <p><a href="https://upskill-academy-xi.vercel.app">https://upskill-academy-xi.vercel.app</a></p>
     </div>
   </div>
 </body>
