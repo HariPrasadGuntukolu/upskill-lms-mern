@@ -36,4 +36,23 @@
             margin: 0 auto;
         }
     }
+
+    .common-btn {
+        padding: 12px 24px;
+        background-color: #1e1e2f;
+        color: #ffffff;
+        font-size: 1rem;
+        font-weight: 600;
+        border: 2px solid #ffffff;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        &:hover {
+          background-color: #1e1e2f;
+          transform: scale(1.05);
+          box-shadow: 0 8px 20px rgba(129, 140, 248, 0.2);
+          border: 2px solid #818CF8;
+        
+        }
+    }
 }
