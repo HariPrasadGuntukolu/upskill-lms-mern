@@ -54,16 +54,16 @@
 
 @media (max-width: 768px) {
   .users table {
-    font-size: 12px;
+    font-size: 10px;
   }
 
   .users th,
   .users td {
-    padding: 8px;
+    padding: 6px;
   }
 
   .update-btn {
     padding: 4px 8px;
-    font-size: 12px;
+    font-size: 10px;
   }
 }
