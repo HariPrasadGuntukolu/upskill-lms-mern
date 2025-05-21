@@ -66,4 +66,13 @@
     padding: 4px 8px;
     font-size: 10px;
   }
+
+  .users {
+    width: 500px;
+    overflow-x: auto;
+    white-space: nowrap;
+    margin: 20px auto;
+    min-height: 80vh;
+    border: solid gray 1px;
+  }
 }
