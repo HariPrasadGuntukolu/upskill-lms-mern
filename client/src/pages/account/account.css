@@ -1,5 +1,5 @@
 .account-wrapper {
-  min-height: calc(100vh - 100px); /* Adjust based on actual footer height */
+  min-height: calc(100vh - 100px);
   display: flex;
   justify-content: center;
   align-items: center;
