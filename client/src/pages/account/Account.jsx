@@ -17,7 +17,7 @@ const Account = ({ user }) => {
   };
 
   return (
-    <div>
+    <div className="account-wrapper">
       {user && (
         <div className="profile">
           <h2>My Profile</h2>
