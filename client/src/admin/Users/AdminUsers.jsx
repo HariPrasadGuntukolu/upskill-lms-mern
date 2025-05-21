@@ -34,7 +34,7 @@ const AdminUsers = ({ user }) => {
   }, []);
 
   const updateRole = async (id) => {
-    if (confirm("Are you sure you want to update this user's role?")) {
+    if (window.confirm("Are you sure you want to update this user's role?")) {
       try {
         const { data } = await axios.put(
           `${server}/api/user/${id}`,

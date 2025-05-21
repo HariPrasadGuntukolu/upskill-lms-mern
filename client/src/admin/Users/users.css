@@ -13,6 +13,7 @@
 .table-responsive {
   width: 100%;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .users table {
@@ -54,16 +55,9 @@
   background-color: #080197;
 }
 
-@media (max-width: 1024px) {
-  .users table {
-    min-width: 500px;
-  }
-}
-
 @media (max-width: 768px) {
   .users table {
     font-size: 12px;
-    min-width: 400px;
   }
 
   .users th,
