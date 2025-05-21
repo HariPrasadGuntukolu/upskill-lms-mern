@@ -53,6 +53,15 @@
 }
 
 @media (max-width: 768px) {
+
+  .users {
+    width: 350px;
+    overflow-x: auto;
+    white-space: nowrap;
+    margin: 15px auto;
+    min-height: 80vh;
+  }
+
   .users table {
     font-size: 10px;
   }
@@ -65,14 +74,5 @@
   .update-btn {
     padding: 4px 8px;
     font-size: 10px;
-  }
-
-  .users {
-    width: 500px;
-    overflow-x: auto;
-    white-space: nowrap;
-    margin: 20px auto;
-    min-height: 80vh;
-    border: solid gray 1px;
   }
 }
