@@ -58,36 +58,38 @@ const AdminUsers = ({ user }) => {
     <Layout>
       <div className="users">
         <h1>All Users</h1>
-        <table border="1">
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Name</th>
-              <th>Email</th>
-              <th>Role</th>
-              <th>Update Role</th>
-            </tr>
-          </thead>
-          <tbody>
-            {users &&
-              users.map((e, i) => (
-                <tr key={e._id || i}>
-                  <td>{i + 1}</td>
-                  <td>{e.name}</td>
-                  <td>{e.email}</td>
-                  <td>{e.role}</td>
-                  <td>
-                    <button
-                      onClick={() => updateRole(e._id)}
-                      className="update-btn"
-                    >
-                      Update Role
-                    </button>
-                  </td>
-                </tr>
-              ))}
-          </tbody>
-        </table>
+        <div className="table-responsive">
+          <table border="1">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Update Role</th>
+              </tr>
+            </thead>
+            <tbody>
+              {users &&
+                users.map((e, i) => (
+                  <tr key={e._id || i}>
+                    <td>{i + 1}</td>
+                    <td>{e.name}</td>
+                    <td>{e.email}</td>
+                    <td>{e.role}</td>
+                    <td>
+                      <button
+                        onClick={() => updateRole(e._id)}
+                        className="update-btn"
+                      >
+                        Update Role
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </Layout>
   );
