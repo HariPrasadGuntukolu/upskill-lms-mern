@@ -2,10 +2,12 @@
   padding: 20px;
   color: #fff;
   min-height: 80vh;
-  width: 350px;
+  width: 100%;
+  max-width: 800px; /* max width on larger screens */
   overflow-x: auto;
   white-space: nowrap;
   margin: 15px auto;
+  box-sizing: border-box;
 }
 
 .users h1 {
@@ -55,7 +57,8 @@
 @media (max-width: 768px) {
 
   .users {
-    width: 350px;
+    width: 100%;
+    max-width: 350px;
     overflow-x: auto;
     white-space: nowrap;
     margin: 15px auto;
