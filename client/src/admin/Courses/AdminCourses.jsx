@@ -47,7 +47,6 @@ const AdminCourses = ({ user }) => {
     setBtnLoading(true);
 
     const myForm = new FormData();
-
     myForm.append("title", title);
     myForm.append("description", description);
     myForm.append("category", category);
@@ -99,7 +98,7 @@ const AdminCourses = ({ user }) => {
             <div className="course-form">
               <h2>Add Course</h2>
               <form onSubmit={submitHandler}>
-                <label htmlFor="text">Title</label>
+                <label>Title</label>
                 <input
                   type="text"
                   value={title}
@@ -107,7 +106,7 @@ const AdminCourses = ({ user }) => {
                   required
                 />
 
-                <label htmlFor="text">Description</label>
+                <label>Description</label>
                 <input
                   type="text"
                   value={description}
@@ -115,7 +114,7 @@ const AdminCourses = ({ user }) => {
                   required
                 />
 
-                <label htmlFor="text">Price</label>
+                <label>Price</label>
                 <input
                   type="number"
                   value={price}
@@ -123,7 +122,7 @@ const AdminCourses = ({ user }) => {
                   required
                 />
 
-                <label htmlFor="text">Created By</label>
+                <label>Created By</label>
                 <input
                   type="text"
                   value={createdBy}
@@ -131,6 +130,7 @@ const AdminCourses = ({ user }) => {
                   required
                 />
 
+                <label>Category</label>
                 <select
                   value={category}
                   onChange={(e) => setCategory(e.target.value)}
@@ -143,7 +143,7 @@ const AdminCourses = ({ user }) => {
                   ))}
                 </select>
 
-                <label htmlFor="text">Duration</label>
+                <label>Duration</label>
                 <input
                   type="number"
                   value={duration}
@@ -151,14 +151,17 @@ const AdminCourses = ({ user }) => {
                   required
                 />
 
+                <label>Upload Image</label>
                 <input type="file" required onChange={changeImageHandler} />
 
-                {imagePrev && <img src={imagePrev} alt="" width={300} />}
+                {imagePrev && (
+                  <img src={imagePrev} alt="Preview" className="preview-img" />
+                )}
 
                 <button
                   type="submit"
                   disabled={btnLoading}
-                  className="add-course"
+                  className="add-course-btn"
                 >
                   {btnLoading ? "Please Wait..." : "Add"}
                 </button>
