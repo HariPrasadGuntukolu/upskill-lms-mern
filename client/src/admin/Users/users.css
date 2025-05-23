@@ -3,7 +3,7 @@
   color: #fff;
   min-height: 80vh;
   width: 100%;
-  max-width: 800px; /* max width on larger screens */
+  max-width: 800px;
   overflow-x: auto;
   white-space: nowrap;
   margin: 15px auto;
