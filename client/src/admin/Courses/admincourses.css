@@ -110,6 +110,26 @@ html, body {
   background-color: rgb(1, 95, 1);
 }
 
+.add-course-btn {
+  background-color: green;
+  color: white;
+  font-size: 1.1rem;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  display: inline-block;
+  text-align: center;
+}
+
+.add-course-btn:hover {
+  background-color: rgb(1, 95, 1);
+}
+
 @media (max-width: 1024px) {
   .admin-courses {
     flex-wrap: wrap;
