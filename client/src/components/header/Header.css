@@ -15,9 +15,16 @@ header {
   font-size: 1.8rem;
   font-weight: bold;
   color: #6366F1;
-  text-shadow: 1px 1px 5px rgba(99, 102, 241, 0.5);
   transition: transform 0.3s ease;
   cursor: pointer;
+}
+
+.logo-blue {
+  color: #6366f1;
+}
+
+.logo-white {
+  color: #ffffff;
 }
 
 .logo:hover {

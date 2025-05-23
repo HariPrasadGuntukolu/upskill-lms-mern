@@ -12,7 +12,10 @@ const Header = ({ isAuth }) => {
   return (
     <header>
       <div className="logo" onClick={closeMenu}>
-        UpSkill
+        <span className="logo-blue">U</span>
+        <span className="logo-white">p</span>
+        <span className="logo-blue">S</span>
+        <span className="logo-white">kill</span>
       </div>
 
       <div className="hamburger" onClick={toggleMenu}>

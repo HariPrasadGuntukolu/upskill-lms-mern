@@ -155,7 +155,12 @@ const AdminCourses = ({ user }) => {
                 <input type="file" required onChange={changeImageHandler} />
 
                 {imagePrev && (
-                  <img src={imagePrev} alt="Preview" className="preview-img" />
+                  <img
+                    src={imagePrev}
+                    alt="Preview"
+                    className="preview-img"
+                    width={300}
+                  />
                 )}
 
                 <button
