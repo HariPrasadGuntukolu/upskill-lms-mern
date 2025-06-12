@@ -24,21 +24,21 @@ UpSkill is a full-stack e-learning platform designed to deliver an engaging and 
 
 ## 🛠️ Tech Stack
 
-### Frontend
+### 💻 Frontend
 - React.js
 
-### Backend
+### 🖥️ Backend
 - Node.js
 - Express.js
 - MongoDB
 
-### Authentication & Security
+### 🔐 Authentication & Security
 - JWT (JSON Web Tokens)
 - Role-Based Access (Admin/User)
 
-### Payments 
+### 💳 Payments 
 - Razorpay (Payment Gateway)
 
-### Deployment
+### 🌍 Deployment
 - Vercel (Frontend)
 - Render (Backend)
