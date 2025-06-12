@@ -1,4 +1,4 @@
-# 📘 UpSkill – E-Learning Application
+# 📘 UpSkill – E-Learning Platform 
 
 UpSkill is a full-stack e-learning platform designed to deliver an engaging and user-friendly online learning experience. With secure authentication, course management, payment integration, and a sleek dark mode UI, UpSkill empowers students and admins with a complete learning management system.
 
