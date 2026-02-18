@@ -52,10 +52,7 @@ const App = () => {
               path="/forgot"
               element={isAuth ? <Home /> : <ForgotPassword />}
             />
-            <Route
-              path="/reset-password/:token"
-              element={isAuth ? <Home /> : <ResetPassword />}
-            />
+            <Route path="/reset-password/:token" element={<ResetPassword />} />
             <Route
               path="/course/:id"
               element={isAuth ? <CourseDescription user={user} /> : <Login />}

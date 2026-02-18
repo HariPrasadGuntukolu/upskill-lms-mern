@@ -32,7 +32,7 @@ const CourseDescription = ({ user }) => {
       }
     );
     const options = {
-      key: "rzp_test_xgySnEyq4KkHWw",
+      key: "rzp_test_RmLkEC6m9qnFkD",
       amount: order.id,
       currency: "INR",
       name: "UpSkill",

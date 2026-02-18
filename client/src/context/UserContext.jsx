@@ -68,10 +68,15 @@ export const UserContextProvider = ({ children }) => {
   }
 
   async function fetchUser() {
+    const token = localStorage.getItem("token");
+    if (!token) {
+      setLoading(false);
+      return;
+    }
     try {
       const { data } = await axios.get(`${server}/api/user/me`, {
         headers: {
-          token: localStorage.getItem("token"),
+          token: token,
         },
       });
       setIsAuth(true);
