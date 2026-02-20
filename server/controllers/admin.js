@@ -92,7 +92,7 @@ export const deleteCourse = TryCatch(async (req, res) => {
     lectures.map(async (lecture) => {
       await unlinkAsync(lecture.video);
       console.log("Video deleted");
-    })
+    }),
   );
   rm(course.image, () => {
     console.log("Image Deleted");
@@ -122,7 +122,7 @@ export const getAllStats = TryCatch(async (req, res) => {
 
 export const getAllUser = TryCatch(async (req, res) => {
   const users = await User.find({ _id: { $ne: req.user._id } }).select(
-    "-password"
+    "-password",
   );
 
   res.json({ users });
