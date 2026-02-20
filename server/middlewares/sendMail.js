@@ -1,5 +1,9 @@
 import { createTransport } from "nodemailer";
 
+const frontendUrl = (
+  process.env.frontendurl || "https://upskill-academy-lovat.vercel.app"
+).replace(/\/$/, "");
+
 const sendMail = async (email, subject, data) => {
   const transport = createTransport({
     host: "smtp.gmail.com",
@@ -133,13 +137,11 @@ export const sendForgotMail = async (subject, data) => {
     <h1>Reset Your Password</h1>
     <p>Hello,</p>
     <p>You have requested to reset your password. Click the button below to continue.</p>
-    <a href="${process.env.frontendurl.replace(/\/$/, "")}/reset-password/${
-    data.token
-  }" class="button">Reset Password</a>
+    <a href="${frontendUrl}/reset-password/${data.token}" class="button">Reset Password</a>
     <p>If you didn’t request this, just ignore this email.</p>
     <div class="footer">
       <p>Thank you,<br>UpSkill Team</p>
-      <p><a href="https://upskill-academy-xi.vercel.app">https://upskill-academy-xi.vercel.app</a></p>
+      <p><a href="${frontendUrl}">${frontendUrl}</a></p>
     </div>
   </div>
 </body>
