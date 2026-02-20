@@ -4,7 +4,7 @@ import App from "./App.jsx";
 import { UserContextProvider } from "./context/UserContext.jsx";
 import { CourseContextProvider } from "./context/CourseContext.jsx";
 
-export const server = "https://upskill-server-ciuq.onrender.com/";
+export const server = "https://upskill-mnqd.onrender.com";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
