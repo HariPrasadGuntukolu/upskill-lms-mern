@@ -3,6 +3,7 @@ import TryCatch from "../middlewares/TryCatch.js";
 import { Courses } from "../models/Courses.js";
 import { Lecture } from "../models/Lecture.js";
 import { User } from "../models/user.js";
+import mongoose from "mongoose";
 import crypto from "crypto";
 import { payment } from "../models/Payment.js";
 import { Progress } from "../models/Progress.js";
@@ -13,11 +14,17 @@ export const getAllCourses = TryCatch(async (req, res) => {
 });
 
 export const getSingleCourse = TryCatch(async (req, res) => {
+  if (!mongoose.Types.ObjectId.isValid(req.params.id))
+    return res.status(400).json({ message: "Invalid Course Id" });
+
   const course = await Courses.findById(req.params.id);
   res.json({ course });
 });
 
 export const fetchLectures = TryCatch(async (req, res) => {
+  if (!mongoose.Types.ObjectId.isValid(req.params.id))
+    return res.status(400).json({ message: "Invalid Course Id" });
+
   const lectures = await Lecture.find({ course: req.params.id });
   const user = await User.findById(req.user._id);
 
@@ -33,6 +40,9 @@ export const fetchLectures = TryCatch(async (req, res) => {
 });
 
 export const fetchLecture = TryCatch(async (req, res) => {
+  if (!mongoose.Types.ObjectId.isValid(req.params.id))
+    return res.status(400).json({ message: "Invalid Lecture Id" });
+
   const lecture = await Lecture.findById(req.params.id);
   const user = await User.findById(req.user._id);
 
@@ -54,6 +64,9 @@ export const getMyCourses = TryCatch(async (req, res) => {
 
 export const checkout = TryCatch(async (req, res) => {
   const user = await User.findById(req.user._id);
+  if (!mongoose.Types.ObjectId.isValid(req.params.id))
+    return res.status(400).json({ message: "Invalid Course Id" });
+
   const course = await Courses.findById(req.params.id);
 
   if (user.subscription.includes(course._id)) {
