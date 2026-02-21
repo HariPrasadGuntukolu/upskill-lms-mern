@@ -5,7 +5,7 @@ import Razorpay from "razorpay";
 import cors from "cors";
 import axios from "axios";
 
-const url = `https://upskill-mnqd.onrender.com`;
+const url = `https://upskill-lms-mern.onrender.com`;
 const interval = 30000;
 
 function reloadWebsite() {
