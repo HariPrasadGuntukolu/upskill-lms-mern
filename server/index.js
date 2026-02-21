@@ -5,29 +5,6 @@ import Razorpay from "razorpay";
 import cors from "cors";
 import axios from "axios";
 
-const url = `http://localhost:5000/`;
-const interval = 30000;
-
-function reloadWebsite() {
-  axios
-    .get(url)
-    .then((response) => {
-      console.log(
-        `Reloaded at ${new Date().toISOString()}: Status Code ${
-          response.status
-        }`,
-      );
-    })
-    .catch((error) => {
-      console.error(
-        `Error reloading at ${new Date().toISOString()}:`,
-        error.message,
-      );
-    });
-}
-
-setInterval(reloadWebsite, interval);
-
 dotenv.config();
 
 export const instance = new Razorpay({
@@ -41,7 +18,28 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-const port = process.env.PORT;
+const port = process.env.PORT || 5000;
+
+const url = `http://localhost:${port}/`;
+const interval = 30000;
+
+function reloadWebsite() {
+  axios
+    .get(url)
+    .then((response) => {
+      console.log(
+        `Reloaded at ${new Date().toISOString()}: Status Code ${response.status}`,
+      );
+    })
+    .catch((error) => {
+      console.error(
+        `Error reloading at ${new Date().toISOString()}:`,
+        error.message,
+      );
+    });
+}
+
+setInterval(reloadWebsite, interval);
 
 app.get("/", (req, res) => {
   res.send("Server is working");
